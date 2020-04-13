@@ -521,7 +521,7 @@ Pages
     padding-left: 5%;
   }
   .main-navigation {
-    width: 50%;
+    width: 55%;
     margin-left: auto;
   }
   .nav-left {
@@ -538,6 +538,17 @@ Pages
   }
   .menu-primary-container .nav-menu li a {
     text-transform: uppercase;
+    font-weight: 200;
+  }
+  .menu-primary-container .nav-menu .menu-item-33 {
+    border: 1px solid silver;
+    background: #DD1312;
+    margin-top: -10px;
+  }
+  .menu-primary-container .nav-menu .menu-item-33 a {
+    padding: 0.6rem;
+    color: #FFF !important;
+    opacity: 0.7;
   }
   .site-description {
     display: -webkit-box;
@@ -556,13 +567,13 @@ Pages
     margin-top: 10%;
   }
   .site-description .primary {
-    width: 15%;
+    width: 10%;
   }
   .site-description .second {
-    width: 15%;
+    width: 10%;
   }
   .site-description .center {
-    width: 70%;
+    width: 80%;
   }
   footer {
     position: absolute;
@@ -607,6 +618,7 @@ Pages
   }
   .menu-primary-container .nav-menu li a {
     text-transform: uppercase;
+    font-weight: 200;
   }
   .site-description {
     display: -webkit-box;
@@ -625,13 +637,13 @@ Pages
     margin-top: 10%;
   }
   .site-description .primary {
-    width: 15%;
+    width: 10%;
   }
   .site-description .second {
-    width: 15%;
+    width: 10%;
   }
   .site-description .center {
-    width: 70%;
+    width: 80%;
   }
   footer {
     position: absolute;
