@@ -43,7 +43,6 @@
 			// 	<p class="site-title"><a href="<?php //echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php //bloginfo( 'name' ); ?></a></p>
 			// 	<?php
 			// endif; ?> -->
-			<div class="nav-left"></div>
 			<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'leadship' ); ?></button>
 			<?php
