@@ -410,6 +410,14 @@ big {
   font-size: 125%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+}
+
+a {
+  color: #333 !important;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -513,13 +521,13 @@ Pages
     padding-left: 5%;
   }
   .main-navigation {
-    width: 70%;
+    width: 50%;
     margin-left: auto;
   }
   .nav-left {
     width: 5%;
   }
-  .menu .nav-menu {
+  .menu-primary-container .nav-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -528,7 +536,7 @@ Pages
             justify-content: space-between;
     padding-top: 1.9rem;
   }
-  .menu .nav-menu li a {
+  .menu-primary-container .nav-menu li a {
     text-transform: uppercase;
   }
   .site-description {
@@ -581,12 +589,13 @@ Pages
     margin-bottom: auto;
   }
   .main-navigation {
-    width: 45%;
+    width: 50%;
+    margin-left: auto;
   }
   .nav-left {
     width: 5%;
   }
-  .menu .nav-menu {
+  .menu-primary-container .nav-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -596,7 +605,7 @@ Pages
     padding-top: 1.9rem;
     margin-left: auto;
   }
-  .menu .nav-menu li a {
+  .menu-primary-container .nav-menu li a {
     text-transform: uppercase;
   }
   .site-description {
