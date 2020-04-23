@@ -45,6 +45,9 @@ if ( ! function_exists( 'leadship_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'primary' => esc_html__( 'primary', 'leadship' ),
+			'WhoAreWe' => esc_html__( 'WhoAreWe', 'leadship' ),
+			'whatwedo' => esc_html__( 'whatwedo', 'leadship' ),
+			'getintouch' => esc_html__( 'getintouch', 'leadship' ),
 		) );
 
 		/*
@@ -105,8 +108,28 @@ add_action( 'after_setup_theme', 'leadship_content_width', 0 );
  */
 function leadship_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'leadship' ),
+		'name'          => esc_html__( 'whatwedo', 'leadship' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'leadship' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'whoarewe', 'leadship' ),
 		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'leadship' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'getintouch', 'leadship' ),
+		'id'            => 'sidebar-3',
 		'description'   => esc_html__( 'Add widgets here.', 'leadship' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -121,6 +144,10 @@ add_action( 'widgets_init', 'leadship_widgets_init' );
  */
 function leadship_scripts() {
 	wp_enqueue_style( 'leadship-style', get_stylesheet_uri() );
+
+	wp_enqueue_style('aos_css', 'https://unpkg.com/aos@2.3.1/dist/aos.css');
+
+	wp_enqueue_script('aos_js', 'https://unpkg.com/aos@2.3.1/dist/aos.js',  array(), false, true );
 
 	wp_enqueue_script( 'leadship-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

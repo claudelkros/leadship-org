@@ -1,0 +1,96 @@
+
+/* mobiles styles for Single Page*/
+
+/* small tablet styles for Single Page */
+@media screen and (min-width: 620px){
+    
+}
+/* Large tablets & laptop styles for Single Page */
+@media screen and (min-width: 960px){
+    .getintouch__general{
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+        padding-top: 2.5rem;
+    }
+    .getintouch__space{
+        width: 38%;
+    }
+    .widget_nav_menu .widget-title{
+        text-align: center;
+    }
+    .getintouch__general--sidebar{
+        align-self: center;
+    }
+
+    #menu-getintouch{
+        display: flex;
+        flex-direction: column;
+        align-self: auto;
+        text-align: left;
+        width: 200px;
+        margin-left: -24px;
+
+        li{
+            margin-top: 28px;
+            list-style: none;
+            a{
+                text-decoration: none !important;
+            }
+        }
+    }
+    .content{
+        font-size: 1.5rem;
+        p{
+            margin-top: 28px;
+        }
+    }
+    .current_page_item a{
+        color: #DD1312 !important;
+    }
+}
+
+/* desktop styles for Single Page */
+@media screen and (min-width: 1200px){
+    .getintouch__general{
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+        padding-top: 2.5rem;
+    }
+    .getintouch__space{
+        width: 38%;
+    }
+    .widget_nav_menu .widget-title{
+        text-align: center;
+    }
+    .getintouch__general--sidebar{
+        align-self: center;
+    }
+
+    #menu-getintouch{
+        display: flex;
+        flex-direction: column;
+        align-self: auto;
+        text-align: left;
+        width: 200px;
+        margin-left: -24px;
+
+        li{
+            margin-top: 28px;
+            list-style: none;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    .content{
+        font-size: 1.5rem;
+        p{
+            margin-top: 28px;
+        }
+    }
+    .current_page_item a{
+        color: #DD1312 !important;
+    }
+}

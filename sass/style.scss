@@ -11,8 +11,7 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-@import "typography/typography";
-@import "typography/headings";
+// @import "typography/headings";
 
 /*--------------------------------------------------------------
 # Elements
@@ -27,6 +26,9 @@ Pages
 @import "pages/header";
 @import "pages/variables";
 @import "pages/news";
+@import "pages/whoarewe";
+@import "pages/whatwedo";
+@import "pages/getintouch";
 
 /*--------------------------------------------------------------
 # Forms

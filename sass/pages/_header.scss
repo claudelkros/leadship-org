@@ -1,4 +1,26 @@
-
+.menu-item > a {
+    font-size: 1rem !important;
+}
+html {   
+    letter-spacing: 1px;
+    font-size: 100%; // Usually 16 pixels 
+  }  
+  h*, a {   
+    font-size: 3rem; // 3 × base font size (3 × 16px) 
+  }
+  html {   
+    font-size: 100%;    
+    
+    @media screen and (min-width: 768px) {     
+      font-size: 100%;   
+    } 
+  }  
+  h1 {   
+    font-size: 3rem;    
+    @media screen and (min-width: 768px) {     
+      font-size: 3.5rem;   
+    } 
+  }
 /* mobiles styles for Header*/
 
 /* small tablet styles for Header*/
@@ -21,15 +43,14 @@
         }
     }
     .main-navigation{
+        width: 100%;
         margin-left: auto;
-    }
-    .nav-left{
-        width: 5%;
     }
     .menu-primary-container .nav-menu{
         display: flex;
-        justify-content: space-between;
-        padding-top: 1.9rem;
+        justify-content: space-around;
+        // width: 80%;
+        padding-top: 2rem;
 
         li a{
             text-transform: uppercase;
@@ -93,15 +114,15 @@
         }
     }
     .main-navigation{
+        width: 100%;
         margin-left: auto;
     }
-    .nav-left{
-        width: 5%;
-    }
+
     .menu-primary-container .nav-menu{
         display: flex;
-        justify-content: space-between;
-        padding-top: 1.9rem;
+        justify-content: space-around;
+        width: 80%;
+        padding-top: 2rem;
         margin-left: auto;
 
         li a{
@@ -136,5 +157,28 @@
         position: absolute;
         bottom: 0;
         display: none;
+    }
+}
+
+.typing{
+    position: relative;
+    margin-left: 10px;
+}
+.typing::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 28%;
+    border-right: 2px solid white;
+    animation: 3s linear 1s blink;
+    animation-iteration-count: 1;
+    margin-top: 30px;
+}
+@keyframes blink{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

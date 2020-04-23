@@ -1,0 +1,135 @@
+
+/* mobiles styles for Single Page*/
+
+/* small tablet styles for Single Page */
+@media screen and (min-width: 620px){
+    .whoarewe__general{
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+        padding-top: 2.5rem;
+    }
+    .whoarewe__space{
+        width: 38%;
+    }
+    .widget_nav_menu .widget-title{
+        text-align: center;
+    }
+    .whoarewe__general--sidebar{
+        align-self: center;
+    }
+
+    #menu-whoarewe{
+        display: flex;
+        flex-direction: column;
+        align-self: auto;
+        text-align: left;
+        width: 200px;
+        margin-left: -24px;
+
+        li{
+            margin-top: 28px;
+            list-style: none !important;
+            a{
+                text-decoration: none;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .content{
+        font-size: 1.5rem;
+        margin-top: 18px;
+    }
+    .current_page_item a{
+        color: #DD1312 !important;
+    }
+}
+/* Large tablets & laptop styles for Single Page */
+@media screen and (min-width: 960px){
+    .whoarewe__general{
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+        padding-top: 2.5rem;
+    }
+    .whoarewe__space{
+        width: 38%;
+    }
+    .widget_nav_menu .widget-title{
+        text-align: center;
+    }
+    .whoarewe__general--sidebar{
+        align-self: center;
+    }
+
+    #menu-whoarewe{
+        display: flex;
+        flex-direction: column;
+        align-self: auto;
+        text-align: left;
+        width: 200px;
+        margin-left: -24px;
+
+        li{
+            margin-top: 47px;
+            list-style: none;
+            a{
+                text-decoration: none;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .content{
+        font-size: 1.5rem;
+        p{
+            margin-top: 28px;
+        }
+    }
+    .current_page_item a{
+        color: #DD1312 !important;
+    }
+}
+
+/* desktop styles for Single Page */
+@media screen and (min-width: 1200px){
+    .whoarewe__general{
+        display: flex;
+        flex-direction: row;
+        padding-left: 5%;
+        padding-top: 2.5rem;
+    }
+    .whoarewe__space{
+        width: 38%;
+    }
+    .widget_nav_menu .widget-title{
+        text-align: center;
+    }
+    .whoarewe__general--sidebar{
+        align-self: center;
+    }
+
+    #menu-whoarewe{
+        display: flex;
+        flex-direction: column;
+        align-self: auto;
+        text-align: left;
+        width: 200px;
+        margin-left: -24px;
+
+        li{
+            margin-top: 28px;
+            list-style: none !important;
+            a{
+                text-decoration: none;
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .content{
+        font-size: 1.5rem;
+        margin-top: 18px;
+    }
+    .current_page_item a{
+        color: #DD1312 !important;
+    }
+}

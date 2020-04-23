@@ -19,7 +19,7 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-@import "lists";
+// @import "lists";
 
 img {
 	height: auto; /* Make sure images are scaled correctly. */
@@ -31,3 +31,8 @@ figure {
 }
 
 @import "tables";
+
+.menu-item > a{
+	text-transform: uppercase;
+	font-size: 1.12rem !important;
+}
