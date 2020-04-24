@@ -52,18 +52,20 @@
 			) );
 			?>
 			</nav><!-- #site-navigation -->
-			<div class="nav-left"></div>
 		</div><!-- .site-branding -->
 
 		
 
 		<?php
 			$leadship_description = get_bloginfo( 'description', 'display' );
-			if ( $leadship_description || is_customize_preview() ) :
+			if ( $leadship_description || is_customize_preview() AND is_front_page()) :
 				?>
 				<div class="site-description">
 					<div class="primary"></div>
-					<div class="center"><?php echo $leadship_description; /* WPCS: xss ok. */ ?></div>
+					<div class="center" style="display:flex">
+						<div class="typing"><?php echo $leadship_description; /* WPCS: xss ok. */ ?> </div>
+						
+					</div>
 					<div class="second"></div>
 				</div>
 			<?php endif; ?>
