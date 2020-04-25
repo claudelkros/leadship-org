@@ -5,6 +5,28 @@
  * navigation support for dropdown menus.
  */
 ( function() {
+
+
+	// Responsive trigger
+
+	const hamburger = document.querySelector('.hamburger');
+	const navLinks = document.querySelector('.navlinks');
+	const linksList = document.querySelectorAll('.navlinks li');
+	const lineBurgers = document.querySelectorAll('.hamburger .line');
+
+
+	hamburger.addEventListener('click', ()=> {
+		console.log('clicked')
+		navLinks.classList.toggle('active')
+		linksList.forEach((link) => {
+			link.classList.toggle('fade')
+		})
+
+		lineBurgers.forEach((line) => {
+			line.classList.toggle('toggle')
+		})
+	})
+
 	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );

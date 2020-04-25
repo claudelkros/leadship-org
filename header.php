@@ -28,8 +28,6 @@
 <?php endif; ?>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'leadship' ); ?></a>
-
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
@@ -44,14 +42,19 @@
 			// 	<?php
 			// endif; ?> -->
 			<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'leadship' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'primary' ,
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary' ,
+					'menu_id'        => 'primary-menu',
+					'menu_class'	 => 'navlinks'
+				) );
+				?>
 			</nav><!-- #site-navigation -->
+			<div class="hamburger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
 		</div><!-- .site-branding -->
 
 		
