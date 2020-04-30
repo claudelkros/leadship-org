@@ -18,19 +18,25 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-</head>
+</head> 
 <?php if(is_front_page()): ?>
 	<body <?php body_class(); ?>>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'leadship' ); ?></a>
+	<header id="masthead" class="site-header" style='background:url("<?php header_image() ?>");background-size:cover;background-position:center;height:100vh'>
 <?php elseif(is_home()): ?>
 	<body>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'leadship' ); ?></a>
+	<header id="masthead" class="site-header">
+	
 <?php else : ?>
 	<body>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'leadship' ); ?></a>
+	<header id="masthead" class="site-header">
+	
 <?php endif; ?>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'leadship' ); ?></a>
-
-	<header id="masthead" class="site-header">
+	
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
