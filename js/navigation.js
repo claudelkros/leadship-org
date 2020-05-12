@@ -5,6 +5,28 @@
  * navigation support for dropdown menus.
  */
 ( function() {
+
+
+	// Responsive trigger
+
+	const hamburger = document.querySelector('.hamburger');
+	const navLinks = document.querySelector('.navlinks');
+	const linksList = document.querySelectorAll('.navlinks li');
+	const lineBurgers = document.querySelectorAll('.hamburger .line');
+
+
+	hamburger.addEventListener('click', ()=> {
+		console.log('clicked')
+		navLinks.classList.toggle('active')
+		linksList.forEach((link) => {
+			link.classList.toggle('fade')
+		})
+
+		lineBurgers.forEach((line) => {
+			line.classList.toggle('toggle')
+		})
+	})
+
 	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
@@ -105,22 +127,22 @@
 	}( container ) );
 } )();
 
-const texts = ["IGNITING CHANGE IN LOCAL COMMUNITIES "];
-let count = 0;
-let index = 0;
-let currentText = "";
+// const texts = ["IGNITING CHANGE IN LOCAL COMMUNITIES "];
+// let count = 0;
+// let index = 0;
+// let currentText = "";
 
-(function type(){
-	if(count === texts.length){
-		count = 0;
-	}
-	currentText = texts[count];
-	letter = currentText.slice(0, ++index);
+// (function type(){
+// 	if(count === texts.length){
+// 		count = 0;
+// 	}
+// 	currentText = texts[count];
+// 	letter = currentText.slice(0, ++index);
 
-	document.querySelector(".typing").textContent = letter;
-	if(letter.length === currentText.length){
-		count++;
-		index = 0;
-	}
-	setTimeout(type, 200);
-})();
+// 	document.querySelector(".typing").textContent = letter;
+// 	if(letter.length === currentText.length){
+// 		count++;
+// 		index = 0;
+// 	}
+// 	setTimeout(type, 200);
+// })();

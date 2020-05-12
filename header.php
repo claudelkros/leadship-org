@@ -35,8 +35,7 @@
 	
 <?php endif; ?>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	
+<div id="" class="site">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -50,14 +49,19 @@
 			// 	<?php
 			// endif; ?> -->
 			<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'leadship' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'primary' ,
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'primary' ,
+					'menu_id'        => 'primary-menu',
+					'menu_class'	 => 'navlinks'
+				) );
+				?>
 			</nav><!-- #site-navigation -->
+			<div class="hamburger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
 		</div><!-- .site-branding -->
 
 		
@@ -69,12 +73,15 @@
 				<div class="site-description">
 					<div class="primary"></div>
 					<div class="center" style="display:flex">
-						<div class="typing"><?php echo $leadship_description; /* WPCS: xss ok. */ ?> </div>
-						
+						<?php echo $leadship_description; /* WPCS: xss ok. */ ?>
 					</div>
 					<div class="second"></div>
 				</div>
 			<?php endif; ?>
+			<?php if(is_front_page()): ?>
+				<div class="slide_element">
+					<img src="<?php echo get_template_directory_uri()?>/chevron.svg" alt="" class="scroll-down">
+				</div>
+			<?php endif?>
 	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">

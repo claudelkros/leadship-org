@@ -186,3 +186,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function max_title_length( $title ) {
+	$max = 25;
+	if( strlen( $title ) > $max ) {
+	return substr( $title, 0, $max ). " &hellip;";
+	} else {
+	return $title;
+	}
+	}
+	add_filter( 'the_title', 'max_title_length');

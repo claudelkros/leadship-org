@@ -16,8 +16,13 @@ get_header();
 ?>
 
 	<div id="primary " class="content-area front__page--background">
-		<main id="main" class="site-main">
-			<div class="front__page--post">
+		<main id="main" class="main-content">
+			<div class="title-descript">
+				<img src="<?= get_template_directory_uri()?>/assets/image/b.jpg" alt="">
+				<h2 class="text-content">THE LAST POST</h2>
+			</div>
+			<div class="spacing" style="padding: 3%;"></div>
+			<div class="front__page--posts" >
 				
 				<?php $the_query = new WP_Query( 'posts_per_page=4' ); ?>
 				<?php if (have_posts() ) : ?>
@@ -35,19 +40,12 @@ get_header();
 						// Start the loop.
 						while ( $the_query->have_posts() ) :
 							$the_query->the_post(); ?>
-							<div class="front__page--post--list">
+							<div class="front__page--post--list ">
 
 								<div class="entry-content" itemprop="description">
 									<?php the_post_thumbnail(); ?>
 										<div class="text-content">
 											<?php
-											/*
-											* Include the Post-Format-specific template for the content if it's a post, otherwise include the Post-Type-specific template.
-											*/
-											// get_template_part(
-											// 	'template-parts/post/item',
-											// 	get_post_type() !== 'post' ? get_post_type() : get_post_format()
-											// );
 											the_title(
 												sprintf(
 													'<h2 class="entry-title" itemprop="headline"><a href="%s" rel="bookmark" itemprop="url">',
@@ -55,11 +53,15 @@ get_header();
 												),
 												'</a></h2>'
 											);
-					
+											
 					
 											?>
 										</div>
-									<?php the_excerpt(); ?>
+										<div class="category categories--color">
+											<?php echo get_the_category_list(); ?>
+										</div>
+										
+									<?php //the_excerpt(); ?>
 								</div><!-- .entry-content -->
 							</div>
 							<?php
@@ -85,10 +87,34 @@ get_header();
 
 				endif;
 				?>
+				
 			</div>
-
-
+			
 		</main><!-- #main -->
+		<div class="overlay">
+			<div class="what__we__do" style='background:url("<?= get_template_directory_uri() ?>/assets/image/children.jpeg");background-origin: unset;background-repeat: no-repeat;background-size: 627px;background-position: right;'>
+				
+				<div class="spacing" style="padding: 3%;"></div>
+				<div class="what__we__do--description">
+					<p style="width:60%">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						A unde laborum rerum, repudiandae cumque reiciendis sint. Distinctio nemo numquam laborum, 
+						odio dolore doloremque quisquam laboriosam quaerat fugiat eveniet id eligendi.
+					</p>
+					<p style="width:45%">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						A unde laborum rerum, repudiandae cumque reiciendis sint. Distinctio nemo numquam laborum, 
+						odio dolore doloremque quisquam laboriosam quaerat fugiat eveniet id eligendi.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+					</p>
+				</div>
+				<div class="what__we__do--title" style="color:#FFF;position: absolute;background: #00000087;right: 0;width: 30%">
+					<h2>WHAT WE LOVE TO DO </h2>
+				</div>
+			</div>
+		</div>
 	</div><!-- #primary -->
 
 <?php

@@ -59,6 +59,6 @@ add_action( 'customize_preview_init', 'leadship_customize_preview_js' );
  * Proper way to enqueue scripts and styles
  */
 function wpdocs_css_from_sass() {
-    wp_enqueue_style( 'Monstyle', get_template_directory_uri() .'/sass/style.css', true );
+    wp_enqueue_style( 'hopestyle', get_template_directory_uri() .'/sass/style.css', true );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_css_from_sass' );

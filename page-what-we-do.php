@@ -9,12 +9,12 @@
 get_header();
 ?>
 
-	<div id="" class="whatwedo__general">
-        <div class="whatwedo__general--sidebar">
+	<div id="" class="page__general">
+        <div class="page__general--sidebar">
         <?php dynamic_sidebar('whatwedo'); ?>
         </div>
-        <div class="whatwedo__space"></div>
-		<div id="content" class="content" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">
+        <div class="page__space"></div>
+		<div class="main-content" data-aos-anchor-placement="top-center" data-aos-duration="2000">
 
             <?php
             while ( have_posts() ) :

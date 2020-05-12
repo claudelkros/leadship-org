@@ -9,12 +9,12 @@
 get_header();
 ?>
 
-	<div id="" class="getintouch__general">
-        <div class="getintouch__general--sidebar">
+	<div id="" class="page__general">
+        <div class="page__general--sidebar">
             <?php dynamic_sidebar('getintouch'); ?>
         </div>
-        <div class="getintouch__space"></div>
-		<div id="content" class="content">
+        <div class="pageh__space"></div>
+		<div id="content" class="main-content">
 
             <?php
             while ( have_posts() ) :
